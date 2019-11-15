@@ -22,7 +22,7 @@
         "react/jsx-no-undef": 2,
         "react/no-multi-comp": 2,
         "react/jsx-indent-props": [
-            "error",
+            "warn",
             2
         ],
         "react/jsx-pascal-case": 2,
@@ -32,11 +32,11 @@
             2
         ],
         "indent": [
-            "error",
+            "warn",
             2
         ],
         "linebreak-style": [
-            "error",
+            "warn",
             "unix"
         ],
         "quotes": [

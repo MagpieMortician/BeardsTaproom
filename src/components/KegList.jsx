@@ -1,16 +1,16 @@
 import React from 'react';
-import Ticket from './Keg';
+import Keg from './Keg';
 
-var masterTicketList = [
+var masterKegList = [
     {   
-        brand: "Montucky",
+        brand: 'Montucky',
         names: 'Pale Ale',
         price: '4',
         alcoholCon: '%5',
         pints: 124
     },
     {
-        brand: "Black Butte",
+        brand: 'Black Butte',
         names: 'IPA',
         price: '4',
         alcoholCon: '%6',
