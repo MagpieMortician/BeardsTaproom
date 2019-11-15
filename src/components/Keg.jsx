@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 function Keg(props) {
     return (
         <div>
-            <h3>{props.brand} - {props.name}</h3>
+            <h3>{props.brand} - {props.names}</h3>
             <p>${props.price} alcohol content: {props.alcoholCon}</p>
             <p>Pints left: {props.pints}</p>
             <hr />
@@ -20,4 +20,4 @@ Ticket.propTypes = {
     pints: PropTypes.int.isRequired
 };
 
-export default Ticket;
+export default Keg;
