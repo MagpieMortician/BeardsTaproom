@@ -1,8 +1,10 @@
+/* eslint-disable linebreak-style */
 import React from 'react';
-import KegList from './TicketList';
-import NewKegForm from './NewTicketForm';
+import KegList from './KegList';
 import Header from './Header';
 import { Switch, Route } from 'react-router-dom';
+import NewKegForm from './NewKegForm';
+
 
 function App() {
   return (

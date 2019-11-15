@@ -1,3 +1,4 @@
+/* eslint-disable linebreak-style */
 /* eslint-disable no-undef */
 const webpack = require('webpack');
 const { resolve } = require('path');
@@ -65,7 +66,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       template:'template.ejs',
       appMountId: 'react-app-root',
-      title: 'React Help Queue',
+      title: 'taproom',
       filename: resolve(__dirname, 'build', 'index.html'),
     }),
   ]

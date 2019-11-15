@@ -1,3 +1,5 @@
+/* eslint-disable linebreak-style */
+// eslint-disable-next-line linebreak-style
 import React from 'react';
 import Keg from './Keg';
 
@@ -25,7 +27,7 @@ var masterKegList = [
   }
 ];
 
-function KegList() {
+function KegList(){
 
   return (
     <div>
