@@ -38,7 +38,7 @@ module.exports = {
                 exclude: /node_modules/,
                 options: {
                     emitWarning: true,
-                    configFile: "./.eslintrc.json"
+                    configFile: "./.eslintrc.json"  
                 }
             },
             {
