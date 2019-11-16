@@ -15,7 +15,7 @@ function Header() {
     padding: '5px',
     fontSize: '50px'
 
-  }
+  };
   return (
     <div style={styling}>
       <h1 style={titleTop}>Taproom</h1>
