@@ -1,40 +1,44 @@
 /* eslint-disable linebreak-style */
-// eslint-disable-next-line linebreak-style
+/* eslint-disable react/jsx-indent */
+/* eslint-disable react/jsx-indent-props */
+/* eslint-disable indent */
 import React from 'react';
 import Keg from './Keg';
 
 var masterKegList = [
-  {   
-    brand: 'Montucky',
-    names: 'Pale Ale',
+  {
+    names: 'IPA',
+    brand: 'Black Butte',
     price: '4',
-    alcoholCon: '%5',
+    alcoholCon: '%6',
     pints: 124
   },
   {
-    brand: 'Black Butte',
-    names: 'IPA',
+    names: 'Pale Ale',
+    brand: 'Montucky',
     price: '4',
     alcoholCon: '%6',
-    pints: 123
+    pints: 35
   },
   {
-    brand: 'IRA',
-    names: 'India Red Ale',
-    price: '4',
+    names: 'Orange Citrus Pale Ale',
+    brand: 'Blue Moon',
+    price: '5',
     alcoholCon: '%6.5',
-    pints: 9
+    pints: 7
   }
 ];
 
 function KegList(){
-
+  var colorizing = {
+    backgroundColor: 'plum'
+  };
   return (
-    <div>
-      <hr />
+    <div style={colorizing}>
+      <hr/>
       {masterKegList.map((keg, index) =>
-        <Keg brand={keg.brand}
-          names={keg.names}
+        <Keg names={keg.names}
+          brand={keg.brand}
           price={keg.price}
           alcoholCon={keg.alcoholCon}
           pints={keg.pints}
