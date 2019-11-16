@@ -6,12 +6,19 @@ import { Link } from 'react-router-dom';
 
 function Header() {
   var styling = {
-    backgroundColor: 'gold',
-    fontFamily: 'cursive'
+    backgroundColor: 'plum',
+    fontFamily: 'cursive',
+    textAlign: 'center',
+    paddingBottom: '10px'
   };
+  var titleTop = {
+    padding: '5px',
+    fontSize: '50px'
+
+  }
   return (
     <div style={styling}>
-      <h1>Taproom</h1>
+      <h1 style={titleTop}>Taproom</h1>
       <Link to="/">Home</Link> | <Link to="/newkeg">New Keg</Link>
     </div>
   );

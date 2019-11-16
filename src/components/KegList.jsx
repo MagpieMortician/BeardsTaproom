@@ -31,7 +31,9 @@ var masterKegList = [
 
 function KegList(){
   var colorizing = {
-    backgroundColor: 'plum'
+    backgroundColor: 'lavender',
+    textAlign: 'center',
+    fontSize: '20px'
   };
   return (
     <div style={colorizing}>
