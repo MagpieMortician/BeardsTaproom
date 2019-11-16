@@ -1,4 +1,4 @@
-# Animal Sheter 
+# Beard's Taproom 
 
 #### A program I created at Epicodus 11-15-2019
 
