@@ -9,7 +9,9 @@ function Header() {
     backgroundColor: 'plum',
     fontFamily: 'cursive',
     textAlign: 'center',
-    paddingBottom: '10px'
+    paddingBottom: '10px',
+    marginLeft: '10%',
+    marginRight: '10%'
   };
   var titleTop = {
     padding: '5px',

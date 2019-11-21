@@ -33,7 +33,10 @@ function KegList(){
   var colorizing = {
     backgroundColor: 'lavender',
     textAlign: 'center',
-    fontSize: '20px'
+    fontFamily: 'verdana',
+    fontSize: '20px',
+    marginLeft: '15%',
+    marginRight: '15%'
   };
   return (
     <div style={colorizing}>
