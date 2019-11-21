@@ -16,6 +16,8 @@ A program that shows you a list of beers at the taproom and a form to create a n
 * click around the website
 * close the website
 
+## Component Structure
+![alt text](./src/assets/compStruct.png)
 
 ## Known Bugs
 * cannot make a new keg listing
