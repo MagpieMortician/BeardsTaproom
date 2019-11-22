@@ -16,7 +16,7 @@ function NewKegForm(props){
 
   function handleNewKegSubmission(event){
     event.preventDefault();
-    props.onNewKegCreation({name: _name, brand: _brand, price: _price, alcoholCon: _alcoholCon, pint: _pints});
+    props.onNewKegCreation({ name: _name, brand: _brand, price: _price, alcoholCon: _alcoholCon, pint: _pints, id: v4() });
   }
 
  return (
@@ -44,7 +44,7 @@ function NewKegForm(props){
          min='0'
          placeholter= '0'
          />
-    <button type='submit'>submit</button>
+    <button onSubmit={handleNewKegSubmission}>submit</button>
    </form>
   </div>
  );
