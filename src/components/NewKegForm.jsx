@@ -16,7 +16,12 @@ function NewKegForm(props){
 
   function handleNewKegSubmission(event){
     event.preventDefault();
-    props.onNewKegCreation({ name: _name, brand: _brand, price: _price, alcoholCon: _alcoholCon, pint: _pints, id: v4() });
+    props.onNewKegCreation({ name: _name, brand: _brand, price: _price, alcoholCon: _alcoholCon, pint: _pints,id: v4() });
+    _name.value = '';
+    _brand.value = '';
+    _price.value = '';
+    _alcoholCon.value = '';
+    _pints.value = 0;
   }
 
  return (
