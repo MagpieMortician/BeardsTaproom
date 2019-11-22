@@ -4,8 +4,21 @@
 /* eslint-disable indent */
 
 import React from 'react';
+import PropTypes from 'prop-types';
+import { v4 } from 'uuid';
 
-function NewKegForm(){
+function NewKegForm(props){
+  let _name = null;
+  let _brand = null;
+  let _price = null;
+  let _alcoholCon = null;
+  let _pints = 0;
+
+  function handleNewKegSubmission(event){
+    event.preventDefault();
+    props.onNewKegCreation({name: _name, brand: _brand, price: _price, alcoholCon: _alcoholCon, pint: _pints});
+  }
+
  return (
   <div>
    <form>
@@ -36,5 +49,7 @@ function NewKegForm(){
   </div>
  );
 }
-
+NewKegForm.PropTypes = {
+onNewKegCreation: PropTypes.func
+};
 export default NewKegForm;

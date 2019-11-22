@@ -4,22 +4,22 @@
 /* eslint-disable indent */
 import React from 'react';
 import Keg from './Keg';
-import { prependOnceListener } from 'cluster';
+import PropTypes from 'prop-types';
 
-function KegList(){
+function KegList(props){
   var colorizing = {
     backgroundColor: 'lavender',
     textAlign: 'center',
     fontFamily: 'verdana',
     fontSize: '20px',
     marginLeft: '15%',
-    marginRight: '15%',
+    marginRight: '15%'
   };
   return (
     <div style={colorizing}>
       <div className='col-md-8'>
       <hr/>
-      {prependOnceListener.kegList.map((keg, index) =>
+      {props.kegList.map((keg, index) =>
         <Keg names={keg.names}
           brand={keg.brand}
           price={keg.price}
@@ -32,4 +32,7 @@ function KegList(){
   );
 }
 
+KegList.propTypes = {
+  kegList: PropTypes.array
+};
 export default KegList;
