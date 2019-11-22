@@ -10,15 +10,13 @@ function KegList(props){
   return (
     <div>
       <hr/>
-      {props.kegList.map((create, index) =>
-        <Keg
-          names={create.names}
-          brand={create.brand}
-          price={create.price}
-          alcoholCon={create.alcoholCon}
-          pints={create.pints}
-          index = {index}
-          key={create.id} />
+      {props.kegList.map((keg) =>
+        <Keg names={keg.names}
+          brand={keg.brand}
+          price={keg.price}
+          alcoholCon={keg.alcoholCon}
+          pints={keg.pints}
+          key={keg.id} />
       )}
     </div>
   );

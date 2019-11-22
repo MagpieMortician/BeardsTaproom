@@ -11,9 +11,9 @@ class App extends React.Component {
     this.state = {
       masterKegList: []
     };
-    this.handleNewKegList = this.handleNewKegList.bind(this);
+    this.handleAddingNewKegToList = this.handleAddingNewKegToList.bind(this);
   }
-  handleNewKegList(newKegForm) {
+  handleAddingNewKegToList(newKegForm) {
     var newMasterKegList = this.state.masterKegList.slice();
     newMasterKegList.push(newKegForm);
     this.setState({ masterKegList: newMasterKegList });
@@ -26,7 +26,6 @@ class App extends React.Component {
         <Switch>
           <Route exact path='/' component={KegList} />
           <Route path='/newkeg' component={NewKegForm} />
-          <KegList kegList={this.state.masterKegList}/>
         </Switch>
       </div>
     );

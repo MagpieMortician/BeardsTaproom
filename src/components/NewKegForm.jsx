@@ -26,35 +26,40 @@ function NewKegForm(props){
 
  return (
   <div>
-   <form>
+   <form onSubmit = {handleNewKegSubmission}>
     <input
      type='text'
      id='names'
      placeholder='Type'/>
+       ref={(input) => { _name = input; }}
     <input
      type='text'
      id='brand'
      placeholder='Brand'/>
+    ref={(input) => { _brand = input; }}
     <input
     type='text'
      id='price'
-     placeholder='Price'/>
+     placeholder='Price'
+      ref={(input) => { _price = input; }}/>
        <input
          type='text'
          id='alcoholCon'
          placeholder='Alcohol Content' />
+        ref={(input) => { _alcoholCon = input; }}
        <input
          type='number'
          id='pints'
          min='0'
          placeholter= '0'
+         ref={(input) => { _pints = input; }}
          />
     <button onSubmit={handleNewKegSubmission}>submit</button>
    </form>
   </div>
  );
 }
-NewKegForm.PropTypes = {
+NewKegForm.propTypes = {
 onNewKegCreation: PropTypes.func
 };
 export default NewKegForm;
