@@ -4,30 +4,7 @@
 /* eslint-disable indent */
 import React from 'react';
 import Keg from './Keg';
-
-var masterKegList = [
-  {
-    names: 'IPA',
-    brand: 'Black Butte',
-    price: '4',
-    alcoholCon: '%6',
-    pints: 124
-  },
-  {
-    names: 'Pale Ale',
-    brand: 'Montucky',
-    price: '4',
-    alcoholCon: '%6',
-    pints: 35
-  },
-  {
-    names: 'Orange Citrus Pale Ale',
-    brand: 'Blue Moon',
-    price: '5',
-    alcoholCon: '%6.5',
-    pints: 7
-  }
-];
+import { prependOnceListener } from 'cluster';
 
 function KegList(){
   var colorizing = {
@@ -42,7 +19,7 @@ function KegList(){
     <div style={colorizing}>
       <div className='col-md-8'>
       <hr/>
-      {masterKegList.map((keg, index) =>
+      {prependOnceListener.kegList.map((keg, index) =>
         <Keg names={keg.names}
           brand={keg.brand}
           price={keg.price}
