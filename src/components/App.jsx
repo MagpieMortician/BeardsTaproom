@@ -11,8 +11,16 @@ class App extends React.Component {
   this.state = {
    masterKegList: []
   };
-  
-  return (
+   this.handleNewKegList = this.handleNewKegList.bind(this);
+
+   this.handleNewKegList(newKegForm){
+     var newMasterKegList = this.state.masterKegList.slice();
+     newMasterKegList.push(newKegForm);
+     this.setState({masterKegList: newMasterKegList});
+   }
+
+  render(){
+  return ( 
    <div>
     <Header />
     <Switch>
