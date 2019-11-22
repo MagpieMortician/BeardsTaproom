@@ -36,10 +36,11 @@ function KegList(){
     fontFamily: 'verdana',
     fontSize: '20px',
     marginLeft: '15%',
-    marginRight: '15%'
+    marginRight: '15%',
   };
   return (
     <div style={colorizing}>
+      <div className='col-md-6'>
       <hr/>
       {masterKegList.map((keg, index) =>
         <Keg names={keg.names}
@@ -49,6 +50,7 @@ function KegList(){
           pints={keg.pints}
           key={index} />
       )}
+      </div>
     </div>
   );
 }
