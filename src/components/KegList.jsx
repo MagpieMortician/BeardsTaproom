@@ -40,7 +40,7 @@ function KegList(){
   };
   return (
     <div style={colorizing}>
-      <div className='col-md-6'>
+      <div className='col-md-8'>
       <hr/>
       {masterKegList.map((keg, index) =>
         <Keg names={keg.names}
