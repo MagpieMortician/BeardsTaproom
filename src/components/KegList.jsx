@@ -7,27 +7,19 @@ import Keg from './Keg';
 import PropTypes from 'prop-types';
 
 function KegList(props){
-  var colorizing = {
-    backgroundColor: 'lavender',
-    textAlign: 'center',
-    fontFamily: 'verdana',
-    fontSize: '20px',
-    marginLeft: '15%',
-    marginRight: '15%'
-  };
   return (
-    <div style={colorizing}>
-      <div className='col-md-8'>
+    <div>
       <hr/>
-      {props.kegList.map((keg, index) =>
-        <Keg names={keg.names}
-          brand={keg.brand}
-          price={keg.price}
-          alcoholCon={keg.alcoholCon}
-          pints={keg.pints}
-          key={index} />
+      {props.kegList.map((create, index) =>
+        <Keg
+          names={create.names}
+          brand={create.brand}
+          price={create.price}
+          alcoholCon={create.alcoholCon}
+          pints={create.pints}
+          index = {index}
+          key={create.id} />
       )}
-      </div>
     </div>
   );
 }

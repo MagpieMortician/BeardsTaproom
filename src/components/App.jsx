@@ -12,24 +12,24 @@ class App extends React.Component {
       masterKegList: []
     };
     this.handleNewKegList = this.handleNewKegList.bind(this);
+  }
+  handleNewKegList(newKegForm) {
+    var newMasterKegList = this.state.masterKegList.slice();
+    newMasterKegList.push(newKegForm);
+    this.setState({ masterKegList: newMasterKegList });
+  }
 
-    this.handleNewKegList(newKegForm) {
-      var newMasterKegList = this.state.masterKegList.slice();
-      newMasterKegList.push(newKegForm);
-      this.setState({ masterKegList: newMasterKegList });
-    }
-
-    render(){
-      return (
-        <div>
-          <Header />
-          <Switch>
-            <Route exact path='/' component={KegList} />
-            <Route path='/newkeg' component={NewKegForm} />
-          </Switch>
-        </div>
-      );
-    }
+  render(){
+    return (
+      <div>
+        <Header />
+        <Switch>
+          <Route exact path='/' component={KegList} />
+          <Route path='/newkeg' component={NewKegForm} />
+          <KegList kegList={this.state.masterKegList}/>
+        </Switch>
+      </div>
+    );
   }
 }
 
