@@ -5,57 +5,60 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import { v4 } from 'uuid';
 
-function NewKegForm(props){
+function NewKegForm(props) {
   let _name = null;
   let _brand = null;
   let _price = null;
   let _alcoholCon = null;
   let _pints = 0;
 
-  function handleNewKegSubmission(event){
+  function handleNewKegFormSubmission(event) {
     event.preventDefault();
-    props.onNewKegCreation({ name: _name, brand: _brand, price: _price, alcoholCon: _alcoholCon, pint: _pints,id: v4() });
+    props.onNewKegCreation({ name: _name.value, brand: _brand.value, price: _price.value, alcoholCon: _alcoholCon.value, pints: _pints.value });
     _name.value = '';
     _brand.value = '';
     _price.value = '';
     _alcoholCon.value = '';
-    _pints.value = 0;
+    _price.value = 0;
   }
 
- return (
-  <div>
-   <form onSubmit = {handleNewKegSubmission}>
-    <input
-     type='text'
-     id='names'
-     placeholder='Type'/>
-    <input
-     type='text'
-     id='brand'
-     placeholder='Brand'/>
-    <input
-    type='text'
-     id='price'
-     placeholder='Price'
-      />
-       <input
-         type='text'
-         id='alcoholCon'
-         placeholder='Alcohol Content' />
-       <input
-         type='number'
-         id='pints'
-         min='0'
-         placeholter= '0'
-         />
-    <button onSubmit={handleNewKegSubmission}>submit</button>
-   </form>
-  </div>
- );
+  return (
+    <div>
+      <form onSubmit={handleNewKegFormSubmission}>
+        <input
+          type='text'
+          id='name'
+          placeholder='Name'
+          ref={(input) => { _name = input; }} />
+        <input
+          type='text'
+          id='brand'
+          placeholder='Brand'
+          ref={(input) => { _brand = input; }} />
+        <input
+          type='text'
+          id='price'
+          placeholder='Price'
+          ref={(input) => { _price = input; }} />
+          <input
+          type='text'
+          id='alcoholCon'
+          placeholder='Alcohol Content'
+          ref={(input) => { _alcoholCon = input; }} />
+        <input
+          type='number'
+          id='pints'
+          placeholder='Number of Pints'
+          ref={(input) => { _pints = input; }} />
+        <button type='submit'>Submit</button>
+      </form>
+    </div>
+  );
 }
+
 NewKegForm.propTypes = {
-onNewKegCreation: PropTypes.func
+  onNewKegCreation: PropTypes.func
 };
+
 export default NewKegForm;

@@ -1,7 +1,7 @@
 /* eslint-disable linebreak-style */
 import React from 'react';
 import KegList from './KegList';
-import NewKegForm from './NewKegForm';
+import NewKegControl from './NewKegControl';
 import Header from './Header';
 import { Switch, Route } from 'react-router-dom';
 
@@ -13,19 +13,19 @@ class App extends React.Component {
     };
     this.handleAddingNewKegToList = this.handleAddingNewKegToList.bind(this);
   }
-  handleAddingNewKegToList(newKegForm) {
+  handleAddingNewKegToList(newKeg) {
     var newMasterKegList = this.state.masterKegList.slice();
-    newMasterKegList.push(newKegForm);
+    newMasterKegList.push(newKeg);
     this.setState({ masterKegList: newMasterKegList });
   }
 
   render(){
     return (
       <div>
-        <Header />
+        <Header/>
         <Switch>
-          <Route exact path='/' component={KegList} />
-          <Route path='/newkeg' component={NewKegForm} />
+          <Route exact path='/' render={()=><KegList kegList={this.state.masterKegList}/>} />
+          <Route path='/newkeg' render={() => <NewKegControl onNewKegCreation={this.handleAddingNewKegToList} />} />
         </Switch>
       </div>
     );

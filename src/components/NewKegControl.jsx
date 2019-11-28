@@ -1,4 +1,7 @@
 /* eslint-disable linebreak-style */
+/* eslint-disable react/jsx-indent */
+/* eslint-disable react/jsx-indent-props */
+/* eslint-disable indent */
 import React from 'react';
 import NewKegForm from './NewKegForm';
 import PropTypes from 'prop-types';
@@ -21,14 +24,19 @@ class NewKegControl extends React.Component {
     let currentlyVisibleContent = null;
     if (this.state.formVisibleOnPage) {
       currentlyVisibleContent = <NewKegForm onNewKegCreation={this.props.onNewKegCreation} />;
-      return (
-        <div>
-          {currentlyVisibleContent}
-        </div>
+    } else {
+      return(
+        <h1>Sup</h1>
       );
     }
+    return (
+      <div>
+        {currentlyVisibleContent}
+      </div>
+    );
   }
 }
+
 NewKegControl.propTypes = {
   onNewKegCreation: PropTypes.func
 };

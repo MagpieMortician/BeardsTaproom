@@ -11,14 +11,14 @@ function KegList(props){
   return (
     <div>
       <hr/>
-      {/* {props.kegList.map((keg) =>
+      {props.kegList.map((keg, index) =>
         <Keg name={keg.name}
           brand={keg.brand}
           price={keg.price}
           alcoholCon={keg.alcoholCon}
           pints={keg.pints}
-          key={keg.id} />
-      )} */}
+          key={index} />
+      )}
     </div>
   );  
 }
